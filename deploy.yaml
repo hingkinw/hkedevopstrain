@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: hkedevopstrain
+  name: andrewdevops
 spec:
   replicas: 1
   strategy:
@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        app: hkedevopstrain
+        app: andrewdevops
     spec:
       containers:
-      - name: hkedevopstrain
+      - name: andrewdevops
         image: docker.io/pleungdev/andrewdevops:$BUILD_ID
         ports:
         - containerPort: 6555
